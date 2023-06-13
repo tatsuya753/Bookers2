@@ -1,7 +1,7 @@
 <h2>User info</h2>
 <!-- ユーザーの詳細 -->
 <div>
-  <%= image_tag current_user.get_profile_image(200,200) %>
+  <%= image_tag user.get_profile_image(200,200) %>
 </div>
 
 <table>
@@ -12,8 +12,8 @@
 
   <tbody>
     <tr>
-      <td><%= current_user.name %></td>
-      <td><%= current_user.introduction %></td>
+      <td><%= user.name %></td>
+      <td><%= user.introduction %></td>
     </tr>
 
   </tbody>

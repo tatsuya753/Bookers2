@@ -1,3 +1,5 @@
+<%= render 'users/show', user: current_user %>
+
 <% @books.each do |book| %>
 
   <p>投稿ユーザー画像：<%= image_tag book.user.get_profile_image(100,100) %></p>
