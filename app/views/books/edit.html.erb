@@ -21,3 +21,8 @@
 <div class= "text">
   <%= f.submit 'Update Book' %>
 <% end %>
+</div>
+
+<%= link_to "Show", user_path(@book.user_id) %>
+  |
+<%= link_to "Back", '/books' %>
