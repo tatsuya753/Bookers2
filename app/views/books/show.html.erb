@@ -2,7 +2,7 @@
 
 <div class= "container">
   <div class= "row">
-    <div class= "col">
+    <div class= "col-md-3">
 <h2>User info</h2>
 <!-- ユーザーの詳細 -->
 <div>
@@ -24,9 +24,13 @@
   </tbody>
 </table>
 
-<p><%= link_to "プロフィール編集", edit_user_path(@user.id) %></p>
+<%= link_to edit_user_path(@user.id), class: 'btn btn-outline-secondary form-control' do %>
+<i class="fas fa-user-cog"></i>
+<% end %>
 <% if @user == current_user %>
-    <p><%= link_to "プロフィール編集", edit_user_path(@user) %></p>
+    <%= link_to edit_user_path(@user.id), class: 'btn btn-outline-secondary form-control' do %>
+<i class="fas fa-user-cog"></i>
+<% end %>
   <% end %>
   
 <h1>New book</h1>
@@ -42,7 +46,7 @@
 </div>
 <% end %>
 
-  <div class= "col">
+  <div class= "col-md-8 offset-md-1">
       <h2>Book detail</h2>
 <table class= "table">
    <tbody>

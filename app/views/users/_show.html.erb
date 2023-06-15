@@ -20,7 +20,9 @@
 </table>
 
 <% if user == current_user %>
-    <p><%= link_to "プロフィール編集", edit_user_path(user) %></p>
+    <%= link_to edit_user_path(user), class: 'btn btn-outline-secondary form-control' do %>
+<i class="fas fa-user-cog"></i>
+<% end %>
   <% end %>
 
 <h1>New book</h1>
