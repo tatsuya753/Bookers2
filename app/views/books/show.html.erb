@@ -24,10 +24,11 @@
   </tbody>
 </table>
 
+<p><%= link_to "プロフィール編集", edit_user_path(@user.id) %></p>
 <% if @user == current_user %>
     <p><%= link_to "プロフィール編集", edit_user_path(@user) %></p>
   <% end %>
-
+  
 <h1>New book</h1>
 <%= form_with model: Book.new do |f| %>
 
@@ -38,8 +39,8 @@
       <%= f.text_area :body %>
 
     <%= f.submit 'Create Book' %>
-    <% end %>
-    </div>
+</div>
+<% end %>
 
   <div class= "col">
       <h2>Book detail</h2>
